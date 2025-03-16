@@ -116,8 +116,8 @@ function ProductInfo() {
                     {product.prices && (
                         <Box sx={{ textAlign: 'center', mt: 2 }}>
                             <Stack
-                                spacing={8}
-                                direction={{ xs: 'column', sm: 'row' }}
+                                spacing={6}
+                                direction="row"
                                 justifyContent="center"
                                 alignItems="flex-start"
                             >

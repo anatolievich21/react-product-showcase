@@ -20,19 +20,42 @@ function Header() {
             <Toolbar>
                 <Stack
                     direction="row"
-                    spacing={2}
+                    spacing={1}
                     justifyContent="space-around"
                     width="100%"
                     py={1}
                 >
                     {features.map((feature, index) => (
-                        <Box key={index} display="flex" alignItems="center" gap={1}>
+                        <Box
+                            key={index}
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 0.5,
+                                minWidth: 0
+                            }}
+                        >
                             <Typography variant="h6">{feature.icon}</Typography>
-                            <Box>
-                                <Typography variant="body2" sx={{ fontWeight: 'bold', lineHeight: 1.2 }}>
+                            <Box sx={{ minWidth: 0 }}>
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        fontWeight: 'bold',
+                                        lineHeight: 1,
+                                        whiteSpace: 'nowrap',
+                                        fontSize: '0.8rem'
+                                    }}
+                                >
                                     {feature.title}
                                 </Typography>
-                                <Typography variant="body2" sx={{ lineHeight: 1.2 }}>
+                                <Typography
+                                    variant="body2"
+                                    sx={{
+                                        lineHeight: 1,
+                                        whiteSpace: 'nowrap',
+                                        fontSize: '0.8rem'
+                                    }}
+                                >
                                     {feature.subtitle}
                                 </Typography>
                             </Box>
